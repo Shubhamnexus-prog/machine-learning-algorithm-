@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Sep 22 13:23:33 2026
-
-@author: SHUBHAM
-"""
 
 #  IMPORTNING THE LIBRARY
 
@@ -17,7 +11,7 @@ import pandas as pd
 
 # import the dataset & divided my dataset into independe & dependent
 
-dataset = pd.read_csv(r"D:\ds 2\N_Batch -- 4.00PM -- Jun 26\3. Mar 26\2nd  - ML\5. Data preprocessing")
+dataset = pd.read_csv(r'D:\ds 2\N_Batch -- 4.00PM -- Jun 26\3. Mar 26\2nd  - ML\5. Data preprocessing/Data.csv')
 
 X = dataset.iloc[:, :-1].values	
 
@@ -72,3 +66,12 @@ x_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test) 
 
 #---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
