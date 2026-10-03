@@ -310,7 +310,6 @@ svr_model_pred = svr_regressor.predict([[6.5]])
 print(svr_model_pred)
 
 
-
 #svr show graph visulazation
 
 plt.scatter(X, y, color='red')
@@ -319,4 +318,171 @@ plt.title('Level or Salary (SVR)')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show() 
+
+
+
+#knn---k nerest nighbors-----------------
+
+# knn model 
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor()
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=4, weights='distance', p=1,algorithm='brute')
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=2, weights='uniform', p=2,algorithm='auto')
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=4, weights='uniform')
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=5, weights='distance', p=1)
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=4, weights='distance', p=1)
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+# decission tree--------
+
+from sklearn.tree import DecisionTreeRegressor
+dt_reg = DecisionTreeRegressor()   
+dt_reg.fit(X, y)
+
+dt_reg_pred= dt_reg.predict([[6.5]])
+dt_reg_pred
+
+
+from sklearn.tree import DecisionTreeRegressor
+regressor = DecisionTreeRegressor(criterion = 'absolute_error',splitter = 'random')
+dt_reg.fit(X, y)
+
+dt_reg_pred= dt_reg.predict([[6.5]])
+dt_reg_pred
+
+
+
+#random forest---
+
+from sklearn.ensemble import RandomForestRegressor
+rf_reg = RandomForestRegressor(n_estimators=27,random_state=0)
+rf_reg.fit(X, y) 
+
+rf_reg_pred= rf_reg.predict([[6.5]])
+rf_reg_pred
+
+
+#random forest---
+
+from sklearn.ensemble import RandomForestRegressor
+rf_reg = RandomForestRegressor(random_state=0)
+rf_reg.fit(X, y) 
+
+rf_reg_pred= rf_reg.predict([[6.5]])
+rf_reg_pred
+
+
+from sklearn.ensemble import RandomForestRegressor
+rf_reg = RandomForestRegressor(n_estimators=100,random_state=0)
+rf_reg.fit(X, y) 
+
+rf_reg_pred= rf_reg.predict([[6.5]])
+rf_reg_pred
+
+from sklearn.ensemble import RandomForestRegressor
+rf_reg = RandomForestRegressor(n_estimators=15)
+rf_reg.fit(X, y) 
+
+rf_reg_pred= rf_reg.predict([[6.5]])
+rf_reg_pred
+
+
+
+from sklearn.ensemble import RandomForestRegressor
+rf_reg = RandomForestRegressor(n_estimators=45,random_state=0,max_depth=None,max_samples=5,min_samples_leaf=2)
+rf_reg.fit(X, y) 
+
+rf_reg_pred= rf_reg.predict([[6.5]])
+rf_reg_pred
+
+
+
+#xgboost
+
+import xgboost as xg
+
+xgb_r = xg.XGBRegressor(
+    objective='reg:squarederror',
+    n_estimators=4
+)
+
+xgb_r.fit(X, y)
+
+xgb_reg_pred = xgb_r.predict([[6.5]])
+print(xgb_reg_pred)
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

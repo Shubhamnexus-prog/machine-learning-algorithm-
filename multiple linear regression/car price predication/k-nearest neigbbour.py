@@ -36,3 +36,57 @@ knn_reg_model.fit(X,y)
 
 knn_reg_pred = knn_reg_model.predict([[6.5]])
 print(knn_reg_pred)
+
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor()
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=4, weights='distance', p=1,algorithm='brute')
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=2, weights='uniform', p=2,algorithm='auto')
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=4, weights='uniform')
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=5, weights='distance', p=1)
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg_model = KNeighborsRegressor(n_neighbors=4, weights='distance', p=1)
+knn_reg_model.fit(X,y)
+
+knn_reg_pred = knn_reg_model.predict([[6.5]])
+print(knn_reg_pred)
