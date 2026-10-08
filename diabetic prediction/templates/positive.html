@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Diabetic Diagnosis Result">
+    <meta name="author" content="Shubham Gupta">
+
+    <!-- Title -->
+    <title>Diabetic Diagnosis - Positive</title>
+
+    <!-- Icons font CSS -->
+    <link href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}"
+        rel="stylesheet" media="all">
+
+    <link href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet"
+        media="all">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+
+    <link href="{{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/diabetes.jpg') }}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .result-message {
+            text-align: center;
+        }
+
+        .result-message h2 {
+            margin-bottom: 20px;
+        }
+
+        .result-message p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="page-wrapper p-t-100 p-b-100 font-robo">
+
+        <div class="wrapper wrapper--w680">
+
+            <div class="card card-1">
+
+                <div class="card-heading"></div>
+
+                <div class="card-body result-message">
+
+                    <h2 class="title">
+                        Diagnosis Result: Positive
+                    </h2>
+
+                    <p>
+                        The prediction indicates a possibility of diabetes.
+                    </p>
+
+                    <p>
+                        Please consult a qualified healthcare professional
+                        for proper medical evaluation and advice.
+                    </p>
+
+                    <a href="{{ url_for('index') }}" class="btn btn--radius btn--green home-btn">
+                        Check Again
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- jQuery JS -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+
+    <!-- Vendor JS -->
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/datepicker/moment.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/datepicker/daterangepicker.js') }}"></script>
+
+    <!-- Main JS -->
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+
+</body>
+
+</html>

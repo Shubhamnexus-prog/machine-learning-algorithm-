@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Diabetic Diagnosis">
+    <meta name="author" content="Shubham Gupta">
+    <meta name="keywords" content="Diabetic Diagnosis">
+
+    <!-- Title Page -->
+    <title>Diabetic Diagnosis</title>
+
+    <!-- Icons font CSS -->
+    <link href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}"
+        rel="stylesheet" media="all">
+
+    <link href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet"
+        media="all">
+
+    <!-- Font special for pages -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+
+    <link href="{{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+
+    <!-- Background Image -->
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/diabetes.jpg') }}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="page-wrapper p-t-100 p-b-100 font-robo">
+
+        <div class="wrapper wrapper--w680">
+
+            <div class="card card-1">
+
+                <div class="card-heading"></div>
+
+                <div class="card-body">
+
+                    <h2 class="title">
+                        Diabetic Diagnosis
+                    </h2>
+
+                    <form method="POST" action="{{ url_for('diagnosis') }}">
+
+                        <!-- Name -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" name="name" placeholder="Name" required>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" name="age" placeholder="Age" min="1" max="120"
+                                required>
+                        </div>
+
+                        <!-- Pregnant -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" name="pregnant"
+                                placeholder="Number of Pregnancies" min="0" required>
+                        </div>
+
+                        <!-- Insulin -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" step="any" name="insulin" placeholder="Insulin"
+                                min="0" required>
+                        </div>
+
+                        <!-- BMI -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" step="any" name="bmi" placeholder="BMI" min="0"
+                                required>
+                        </div>
+
+                        <!-- Pedigree -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" step="any" name="pedigree"
+                                placeholder="Diabetes Pedigree Function" min="0" required>
+                        </div>
+
+                        <!-- Glucose -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" step="any" name="glucose" placeholder="Glucose"
+                                min="0" required>
+                        </div>
+
+                        <!-- Blood Pressure -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" step="any" name="bp"
+                                placeholder="Blood Pressure" min="0" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">
+                                Check Diagnosis
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JQuery JS -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+
+    <!-- Vendor JS -->
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/datepicker/moment.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/datepicker/daterangepicker.js') }}"></script>
+
+    <!-- Main JS -->
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+
+</body>
+
+</html>

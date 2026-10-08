@@ -139,32 +139,33 @@ print("Testing Accuracy:", best_model.score(X_test, y_test))
 
 #-----------------FUTURE PREDICTION ------------
 
-dataset1 = pd.read_csv(r"D:\ds 2\N_Batch -- 4.00PM -- Jun 26\3. Mar 26\13th, 16th - logistic, pca\15. Logistic regression with future prediction\15. Logistic regression with future prediction/Future prediction1.csv")
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-d2 = dataset1.copy() 
+# Load data
+dataset1 = pd.read_csv(r"C:\Users\SHUBHAM\Downloads\final1.csv")
 
-dataset1 = dataset1.iloc[:, [2, 3]].values 
+# Copy original data
+d2 = dataset1.copy()
 
-from sklearn.preprocessing import StandardScaler
-sc= StandardScaler()
-M= sc.fit_transform(dataset1) 
+# Encode categorical column
+le = LabelEncoder()
+dataset1['Gender'] = le.fit_transform(dataset1['Gender'])
 
-y_prad1=pd.DataFrame()
+# Select required features
+X = dataset1.iloc[:, [2, 3]].values
 
-y_prad1
+# Scale features
+sc = StandardScaler()
+M = sc.fit_transform(X)
 
+# Prediction
+d2['y_pred1'] = classifier.predict(M)
 
-d2['y_pred1']=classifier.predict(M)
-d2.to_csv('final2.csv')
+# Save result
+d2.to_csv('final1.csv', index=False)
 
-
-# To get the path 
-import os
-os.getcwd()
-
-
-
-
+print(d2.head())
 
 
 from sklearn.metrics import roc_auc_score, roc_curve
@@ -185,37 +186,3 @@ plt.title('ROC Curve')
 plt.legend(loc='lower right')
 plt.grid()
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

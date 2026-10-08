@@ -99,11 +99,45 @@ SELECT *FROM emp WHERE sal>5000 AND sal<10000
 
 --employee joined 2020
 
-SELECT *FROM emp WHERE hiredate>='2020-01-01' AND hiredate<='2020-12-31
+SELECT *FROM emp WHERE hiredate>='2020-01-01' AND hiredate<='2020-12-31'
 
 SELECT *
 FROM emp
-WHERE (job = 'clerk' OR job = 'manager')AND sal > 5000
+WHERE (job ='clerk' OR job = 'manager')
+  AND sal > 5000;
+
+  --display employee whose id 103,100,105--
+
+SELECT * FROM emp WHERE empid IN(100,103,105)
+
+--employ as working cleark manager--
+SELECT *FROM emp WHERE job IN('clerk','manager')
+
+--employee as not working clerk manager
 
 
+SELECT * FROM emp WHERE sal BETWEEN 5000 AND 10000
 
+SELECT * FROM emp WHERE hiredate BETWEEN '2020-01-01' AND '2020-12-31'
+
+SELECT * FROM emp WHERE hiredate  NOT BETWEEN '2020-01-01' AND '2020-12-31'
+
+SELECT*
+FROM emp
+WHERE job IN ('clerk','manager')
+      AND
+      sal BETWEEN 5000 AND 10000
+      AND
+      hiredate NOT BETWEEN '2020-01-01' AND '2020-12-31'
+      AND
+      dept NOT IN ('hr','IT')
+
+SELECT * FROM emp WHERE ename LIKE 's%'
+
+SELECT * FROM emp WHERE ename LIKE '%d'
+
+SELECT *FROM emp WHERE ename LIKE '%a%'
+
+SELECT* FROM emp WHERE ename LIKE '___a%'
+
+SELECT *FROM emp WHERE ename LIKE '%a___'

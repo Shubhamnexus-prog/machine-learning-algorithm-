@@ -1,0 +1,90 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Diabetic Diagnosis">
+    <meta name="author" content="Shubham Gupta">
+    <meta name="keywords" content="Diabetic Diagnosis">
+
+    <!-- Title Page -->
+    <title>Diabetic Diagnosis</title>
+
+    <!-- Icons font CSS -->
+    <link href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}"
+        rel="stylesheet" media="all">
+
+    <link href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet"
+        media="all">
+
+    <!-- Font special for pages -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+
+    <link href="{{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/diabetes.jpg') }}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .result-message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result-message p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .check-again {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="page-wrapper p-t-100 p-b-100 font-robo">
+
+        <div class="wrapper wrapper--w680">
+
+            <div class="card card-1">
+
+                <div class="card-heading"></div>
+
+                <div class="card-body">
+
+                    <div class="result-message">
+
+                        <h2 class="title">
+                            Diagnosis Result: Negative
+                        </h2>
+
+                        <p>
+                            The prediction indicates a low likelihood of diabetes.
+                        </p>
+
+                        <p>
+                            Please continue maintaining a healthy lifestyle
+                            and consult a qualified healthcare pr
