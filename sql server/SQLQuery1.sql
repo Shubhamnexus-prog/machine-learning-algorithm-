@@ -116,6 +116,8 @@ SELECT *FROM emp WHERE job IN('clerk','manager')
 --employee as not working clerk manager
 
 
+--BETWEEN --
+
 SELECT * FROM emp WHERE sal BETWEEN 5000 AND 10000
 
 SELECT * FROM emp WHERE hiredate BETWEEN '2020-01-01' AND '2020-12-31'
@@ -132,6 +134,8 @@ WHERE job IN ('clerk','manager')
       AND
       dept NOT IN ('hr','IT')
 
+--LIKE OPERATOR--
+
 SELECT * FROM emp WHERE ename LIKE 's%'
 
 SELECT * FROM emp WHERE ename LIKE '%d'
@@ -141,3 +145,74 @@ SELECT *FROM emp WHERE ename LIKE '%a%'
 SELECT* FROM emp WHERE ename LIKE '___a%'
 
 SELECT *FROM emp WHERE ename LIKE '%a___'
+
+SELECT*FROM emp WHERE dept in ('hr','IT')
+
+SELECT *FROM emp WHERE ename LIKE '[adks]%'
+
+SELECT * FROM emp WHERE ename LIKE '[a-p]%'
+
+SELECT *FROM emp WHERE sal LIKE '____.00'
+
+--oct month--
+
+SELECT * FROM emp WHERE hiredate LIKE '_____10___'
+
+SELECT *FROM emp WHERE hiredate LIKE '%_10_%'
+
+SELECT *FROM emp WHERE hiredate LIKE '2020%'
+
+--IS OPERATOR--
+
+SELECT* FROM emp
+
+SELECT *FROM emp WHERE sal IS NULL
+
+SELECT * FROM emp WHERE sal IS NOT NULL
+
+SELECT *FROM emp
+
+--ALIAS--
+
+--diaplay annual salary--
+
+SELECT ename ,sal*12 as annualsalary FROM emp
+
+SELECT ename ,sal*12 as [annual salary] FROM emp
+
+--display hra da tax and total sal--
+
+SELECT ename,sal,
+       sal*0.2 as hra,
+       sal*0.4 as da,
+       sal*0.1 as tax,
+       sal+(sal*0.2)+(sal*0.4)-(sal*0.1) as totsal
+FROM emp
+
+select*from emp
+
+--order by--
+--assending order
+
+SELECT *
+FROM emp
+ORDER BY ename
+
+--descending order--
+SELECT * 
+       FROM emp
+       ORDER BY sal
+
+
+SELECT * 
+       FROM emp
+       ORDER BY hiredate
+
+SELECT * 
+FROM emp
+ORDER BY hiredate
+
+
+
+
+
